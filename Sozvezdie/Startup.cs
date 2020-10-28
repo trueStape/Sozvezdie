@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Sozvezdie.DAL.Interfaces;
+using Sozvezdie.DAL.Repositories;
 
 namespace Sozvezdie
 {
@@ -24,6 +26,10 @@ namespace Sozvezdie
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddMvc();
+
+            //TODO 2 : Add Dependency injection
+            services.AddSingleton<IRepositories, Repositories>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
