@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Sozvezdie.BLL.Models
 {
@@ -8,12 +9,11 @@ namespace Sozvezdie.BLL.Models
         public string Title { get; set; }
         public string Header { get; set; }
         public string Description { get; set; }
-        public string PeriodStart { get; set; }
-        public string PeriodEnd { get; set; }
-        public int MinPrice { get; set; }
-
-        public List<RouteModel> Route { get; set; }
-        public List<PhotoCardModel> PhotoCard { get; set; }
+        public DateTime? PeriodStart { get; set; }
+        public DateTime? PeriodEnd { get; set; }
+        public decimal MinPrice { get; set; }
+        public List<string> Route { get; set; }
+        public PhotoCardModel PhotoCard { get; set; }
         public List<PhotoAlbumModel> PhotoAlbum { get; set; }
     }
 }

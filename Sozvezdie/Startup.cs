@@ -29,7 +29,7 @@ namespace Sozvezdie
             services.AddMvc();
 
             //TODO 2 : Add Dependency injection
-            services.AddSingleton<IRepositories, Repositories>();
+            services.AddSingleton<ITourRepository, TourRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -4,11 +4,11 @@ using Sozvezdie.DAL.Models;
 
 namespace Sozvezdie.DAL.Interfaces
 {
-    public interface IRepositories
+    public interface ITourRepository
     {
-        Task<Tour> GetOrCreateTourAsync(TourModel model);
+        Task<Tour> GetOrCreateTourAsync(Tour model);
         Task<Tour> FindTourByIdAsync(int id);
         bool DeleteTour(int id);
-        Task UpdateTourAsync(TourModel model);
+        Task UpdateTourAsync(Tour model);
     }
 }

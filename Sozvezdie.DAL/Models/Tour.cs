@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Sozvezdie.DAL.Models
 {
@@ -8,12 +9,11 @@ namespace Sozvezdie.DAL.Models
         public string Title { get; set; }
         public string Header { get; set; }
         public string Description { get; set; }
-        public string PeriodStart { get; set; }
-        public string PeriodEnd { get; set; }
-        public int MinPrice { get; set; }
-
-        public List<Route> Route { get; set; }
-        public List<PhotoCard> PhotoCard { get; set; }
+        public DateTime? PeriodStart { get; set; }
+        public DateTime? PeriodEnd { get; set; }
+        public decimal MinPrice { get; set; }
+        public List<string> Route { get; set; }
+        public PhotoCard PhotoCard { get; set; }
         public List<PhotoAlbum> PhotoAlbum { get; set; }
         public Tour Clone() => (Tour)MemberwiseClone();
     }
