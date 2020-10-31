@@ -8,11 +8,8 @@ namespace Sozvezdie
         {
             var tours =  DataReader.ReadJsonFile("Data.json", "Data");
 
-            //TODO 5 : add data to TourRepository
-            foreach (var tour in tours)
-            {
-                
-            }
+            //TODO 5 : Add data to TourRepository
+            tourRepository.AddData(tours);
         }
     }
 }
